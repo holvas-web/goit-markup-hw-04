@@ -23,6 +23,9 @@ img {
   --for-text: #434455;
   --services-btn: #4d5ae5;
   --current: #4d5ae5;
+  --soc-icon: #4d5ae5;
+  --soc-icon-footer: rgba(255, 255, 255, 0.1);
+  --socicon-footer-hover: #31D0AA;
   --logo-web: #4d5ae5;
   --color-btn: #ffffff;
   --hover-btn: #404bbf;
@@ -44,6 +47,7 @@ img {
   --label: #404bbf;
   --galleryfooter-br: #e7e9fc;
   --galleryfooter-br-hover: #f4f4fd;
+  --gradient-bg: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 
 .list {
@@ -68,7 +72,7 @@ body {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 } 
 .header-container {
   display: flex;
@@ -119,9 +123,6 @@ body {
   margin-left: 76px;
   gap: 40px;
 }
-/* .menu-item:not(:last-child) {
-  padding-right: 40px;
-}*/
 .current {
   color: var(--current);
 }
@@ -135,10 +136,6 @@ body {
   display: flex;
   align-items: center;
 }
-/* .address-item {
-  display: flex;
-  align-items: center;
-} */
 .address-item:not(:last-child) {
   margin-right: 40px;
 }
@@ -162,6 +159,9 @@ body {
 }
 .services {
   background-color: var(--bg-services);
+  background: var(--gradient-bg), url(../images/people-office.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -208,14 +208,11 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   cursor: pointer;
 }
-/* .container-features {
-  display: flex;
-}  */
 .features {
   color: var(--for-text);
   padding-top: 120px;
 }
-.features-titel,
+.features-titel, .custom-titel
 .cards > h3,
 .gallery-list h2 {
   font-weight: 500;
@@ -238,16 +235,31 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 .features-item > p {
   margin-top: 8px;
 }
+.features-icon {
+  padding: 24px 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+}
+.icons-features {
+  background: #F4F4FD;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  fill: currentColor;
+}
 
 /*What are we do*/
 .offer-container > h2,
-.ourteam-container > h2 {
+.ourteam-container > h2, .custome-titel {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--color-titel);
+  margin-bottom: 72px;
 }
 .offer-list {
   display: flex;
@@ -287,7 +299,61 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   text-align: center;
 }
 .cards-text > p {
-  margin-top: 8px;
+  margin: 8px 0;
+}
+.soclist {
+  display: flex;
+  gap: 24px;
+}
+.soclist-item {
+  width: 40px;
+  height: 40px;
+}
+.soclink {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--soc-icon);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12px;
+}
+.soclink-icon {
+  fill: var(--ourteam-bg);
+}
+.soclink:is(:hover, :focus) {
+  background-color: var(--link-active); 
+}
+.custome {
+
+}
+.custome-list {
+  display: flex;
+  gap: 24px;
+}
+.custome-item {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
+}
+.custome-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8E8F99;
+  border-radius: 4px;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 16px 32px;
+}
+.custome-icon {
+  fill: #8E8F99;
+}
+.custome-link:is(:hover, :focus) {
+  border-color: #404bbf;
+}
+.custome-link:is(:hover, :focus) .custome-icon {
+  fill: #404BBF;
 }
 
 /*Footer*/
@@ -296,10 +362,10 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   padding-top: 100px;
   padding-bottom: 100px;
 }
-/* .footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-} */
+.footer-container {
+  display: flex; 
+  align-items: baseline;
+}
 .footer-logo {
   color: var(--footerlogo);
 }
@@ -311,6 +377,26 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   max-width: 264px;
   color: var(--footer-text);
   margin-top: 16px;
+}
+.text-footer {
+  margin-right: 120px;
+}
+.socmedia-text {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.soclist-item {
+  width: 40px;
+  height: 40px;
+}
+.socmedia .soclink {
+  width: 100%;
+  height: 100%;
+  background-color: var(--soc-icon-footer);
+  padding: 8px;
+}
+.socmedia .soclink:is(:hover, :focus) {
+  background-color: var(--socicon-footer-hover);
 }
 
 /*--------Styles for portfolio--------*/
