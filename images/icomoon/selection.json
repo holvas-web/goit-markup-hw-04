@@ -41,7 +41,7 @@
         }
       ],
       "properties": {
-        "order": 14,
+        "order": 28,
         "id": 13,
         "name": "antenna",
         "prevSize": 32
@@ -387,7 +387,7 @@
       "properties": {
         "order": 24,
         "id": 6,
-        "name": "Logo",
+        "name": "logo",
         "prevSize": 32
       },
       "setIdx": 0,
@@ -437,7 +437,7 @@
       "properties": {
         "order": 25,
         "id": 5,
-        "name": "Logo2",
+        "name": "logo2",
         "prevSize": 32
       },
       "setIdx": 0,
@@ -497,7 +497,7 @@
       "properties": {
         "order": 26,
         "id": 4,
-        "name": "Logo3",
+        "name": "logo3",
         "prevSize": 32
       },
       "setIdx": 0,
@@ -537,7 +537,7 @@
       "properties": {
         "order": 27,
         "id": 3,
-        "name": "Logo4",
+        "name": "logo4",
         "prevSize": 32
       },
       "setIdx": 0,
@@ -597,7 +597,7 @@
       "properties": {
         "order": 17,
         "id": 2,
-        "name": "Logo5",
+        "name": "logo5",
         "prevSize": 32
       },
       "setIdx": 0,
@@ -657,7 +657,7 @@
       "properties": {
         "order": 18,
         "id": 1,
-        "name": "Logo6",
+        "name": "logo6",
         "prevSize": 32
       },
       "setIdx": 0,
