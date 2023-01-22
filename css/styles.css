@@ -166,6 +166,8 @@ body {
   text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
+  margin: auto;
 }
 .services-titel {
   color: var(--color-services);
@@ -228,28 +230,26 @@ body {
   gap: 24px
 }
 .features-item {
-/* display: flex;
-flex-direction: column;
-gap: 8px; */
 flex-basis: calc((100% - 3 * 24px) / 4);
 }
 .features-item > p {
   margin-top: 8px;
 }
-.features-icon {
-  padding: 24px 102px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 264px;
-  height: 112px;
-}
 .icons-features {
   background: #F4F4FD;
   border-radius: 4px;
   margin-bottom: 8px;
-  fill: currentColor;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  min-width: 264px;
 }
+.features-icon {
+  /* fill: currentColor; */
+}
+
 
 /*What are we do*/
 .offer-container > h2,
@@ -334,7 +334,7 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   gap: 24px;
 }
 .custome-item {
-  width: calc((100% - 120px) / 6);
+  width: 168px;
   height: 88px;
 }
 .custome-link {
@@ -343,9 +343,8 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   border: 1px solid #8E8F99;
   border-radius: 4px;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  padding: 16px 32px;
+  align-items: center;
+  justify-content: center;
 }
 .custome-icon {
   fill: #8E8F99;
